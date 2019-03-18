@@ -1,0 +1,16 @@
+PODS:
+  - PaytomatSDK (0.0.10)
+
+DEPENDENCIES:
+  - PaytomatSDK
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PaytomatSDK
+
+SPEC CHECKSUMS:
+  PaytomatSDK: 79aaf0271eeba74a24f030159eaa84363d17a843
+
+PODFILE CHECKSUM: 022243af2a2371e40cb92aa9d8ecdaa33b7a28fd
+
+COCOAPODS: 1.5.3

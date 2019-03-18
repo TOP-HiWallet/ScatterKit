@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/PaytomatSDK/Paytomat SDK/Paytomat SDK/Source/PaytomatSDKError.swift"
+            timestampString = "565373271.839597"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "70"
+            endingLineNumber = "70"
+            landmarkName = "init(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/PaytomatSDK/Paytomat SDK/Paytomat SDK/Source/PaytomatSDKError.swift"
+            timestampString = "565373287.110571"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "62"
+            endingLineNumber = "62"
+            landmarkName = "init(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/PaytomatSDK/Paytomat SDK/Paytomat SDK/Source/PaytomatSDK.swift"
+            timestampString = "565374095.101074"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "191"
+            endingLineNumber = "191"
+            landmarkName = "parseError(action:queryItems:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PaytomatSDK.PaytomatSDK.(parseError in _340E5E6D463852D57E0275069918F9B7)(action: PaytomatSDK.PaytomatSDK.SimpleWallet.Action, queryItems: Swift.Array&lt;Foundation.URLQueryItem&gt;) -&gt; PaytomatSDK.PaytomatSDK.URLResult"
+                  moduleName = "PaytomatSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexmelnichuk/XcodeProjects/sdk-paytomat/Examples/Pods/PaytomatSDK/Paytomat%20SDK/Paytomat%20SDK/Source/PaytomatSDK.swift"
+                  timestampString = "565374095.938579"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "191"
+                  endingLineNumber = "191"
+                  offsetFromSymbolStart = "56">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Foundation.URLQueryItem) -&gt; Swift.Bool in PaytomatSDK.PaytomatSDK.(parseError in _340E5E6D463852D57E0275069918F9B7)(action: PaytomatSDK.PaytomatSDK.SimpleWallet.Action, queryItems: Swift.Array&lt;Foundation.URLQueryItem&gt;) -&gt; PaytomatSDK.PaytomatSDK.URLResult"
+                  moduleName = "PaytomatSDK"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexmelnichuk/XcodeProjects/sdk-paytomat/Examples/Pods/PaytomatSDK/Paytomat%20SDK/Paytomat%20SDK/Source/PaytomatSDK.swift"
+                  timestampString = "565374095.942593"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "191"
+                  endingLineNumber = "191"
+                  offsetFromSymbolStart = "24">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/PaytomatSDK/Paytomat SDK/Paytomat SDK/Source/PaytomatSDK.swift"
+            timestampString = "565374095.101493"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "149"
+            endingLineNumber = "149"
+            landmarkName = "parseResult(from:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
