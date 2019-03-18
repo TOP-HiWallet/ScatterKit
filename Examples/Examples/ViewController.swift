@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import PaytomatSDK
+import ScatterKit
 
 class ViewController: UIViewController {
 

@@ -1,16 +1,16 @@
 PODS:
-  - PaytomatSDK (0.0.10)
+  - ScatterKit (0.0.1)
 
 DEPENDENCIES:
-  - PaytomatSDK
+  - ScatterKit (from `../`)
 
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - PaytomatSDK
+EXTERNAL SOURCES:
+  ScatterKit:
+    :path: "../"
 
 SPEC CHECKSUMS:
-  PaytomatSDK: 79aaf0271eeba74a24f030159eaa84363d17a843
+  ScatterKit: b552899f80bede35fcacb54ebce50e8e070a588c
 
-PODFILE CHECKSUM: 022243af2a2371e40cb92aa9d8ecdaa33b7a28fd
+PODFILE CHECKSUM: c085e3e37ec333fc9663036304fd2dcf53bca105
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

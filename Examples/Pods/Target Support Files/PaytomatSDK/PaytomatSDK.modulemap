@@ -1,6 +1,0 @@
-framework module PaytomatSDK {
-  umbrella header "PaytomatSDK-umbrella.h"
-
-  export *
-  module * { export * }
-}

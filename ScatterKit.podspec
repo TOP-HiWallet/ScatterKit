@@ -17,9 +17,9 @@ ScatterKit allows communication between Swift applications and web pages that us
   s.ios.deployment_target = '9.0'
   s.requires_arc = true
 
-  s.source       = { :git => "https://github.com/paytomat/Paytomat-iOS-SDK.git", :branch => "master", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/paytomat/ScatterKit.git", :branch => "master", :tag => s.version.to_s }
 
   s.source_files  = "ScatterKit/ScatterKit/Source/**/*.swift"
   s.exclude_files = "Examples/*"
-  s.frameworks = 'Foundation', 'UIKit', 'CoreFoundation'
+  s.frameworks = 'Foundation', 'UIKit', 'CoreFoundation', 'WebKit'
 end

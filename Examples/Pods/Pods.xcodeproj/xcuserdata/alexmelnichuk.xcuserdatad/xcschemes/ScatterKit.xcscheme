@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "1B0BB3D9D5E009ED9EA115E7C26C40FA"
-               BlueprintName = "PaytomatSDK"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "PaytomatSDK.framework">
+               BlueprintIdentifier = "3CAF82DE1B398AAA7C41C687B72E101B"
+               BuildableName = "ScatterKit"
+               BlueprintName = "ScatterKit"
+               ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
