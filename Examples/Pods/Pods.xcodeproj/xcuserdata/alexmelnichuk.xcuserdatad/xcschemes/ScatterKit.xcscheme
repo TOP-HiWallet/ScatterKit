@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "3CAF82DE1B398AAA7C41C687B72E101B"
-               BuildableName = "ScatterKit"
+               BuildableName = "ScatterKit.framework"
                BlueprintName = "ScatterKit"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>

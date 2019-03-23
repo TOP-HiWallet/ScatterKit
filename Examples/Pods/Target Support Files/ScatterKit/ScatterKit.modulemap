@@ -1,0 +1,6 @@
+framework module ScatterKit {
+  umbrella header "ScatterKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

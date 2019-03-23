@@ -20,6 +20,9 @@ ScatterKit allows communication between Swift applications and web pages that us
   s.source       = { :git => "https://github.com/paytomat/ScatterKit.git", :branch => "master", :tag => s.version.to_s }
 
   s.source_files  = "ScatterKit/ScatterKit/Source/**/*.swift"
+  s.resource_bundles = {
+      'ScatterKit' => ['ScatterKit/ScatterKit/Source/scatterkit_script.js']
+  }
   s.exclude_files = "Examples/*"
-  s.frameworks = 'Foundation', 'UIKit', 'CoreFoundation', 'WebKit'
+  s.frameworks = 'Foundation', 'UIKit', 'WebKit'
 end

@@ -17,11 +17,12 @@
   },
   "requires_arc": true,
   "source": {
-    "git": "https://github.com/paytomat/Paytomat-iOS-SDK.git",
+    "git": "https://github.com/paytomat/ScatterKit.git",
     "branch": "master",
     "tag": "0.0.1"
   },
   "source_files": "ScatterKit/ScatterKit/Source/**/*.swift",
+  "resources": "ScatterKit/ScatterKit/Resources",
   "exclude_files": "Examples/*",
   "frameworks": [
     "Foundation",

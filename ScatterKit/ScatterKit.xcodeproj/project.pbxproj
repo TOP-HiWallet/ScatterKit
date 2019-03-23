@@ -10,6 +10,15 @@
 		663D8C0022402391006271CD /* ScatterKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 663D8BF622402391006271CD /* ScatterKit.framework */; };
 		663D8C0522402391006271CD /* ScatterKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 663D8C0422402391006271CD /* ScatterKitTests.swift */; };
 		663D8C0722402391006271CD /* ScatterKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 663D8BF922402391006271CD /* ScatterKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		66705EB92242E928002A603B /* ScatterKitTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66705EB82242E928002A603B /* ScatterKitTransaction.swift */; };
+		66705EBB2242EF78002A603B /* Decodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66705EBA2242EF78002A603B /* Decodable+Extension.swift */; };
+		668B784E22402F4A006EF8F6 /* scatterkit_script.js in Resources */ = {isa = PBXBuildFile; fileRef = 668B784D22402F4A006EF8F6 /* scatterkit_script.js */; };
+		668B785022402F98006EF8F6 /* ScatterKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B784F22402F98006EF8F6 /* ScatterKit.swift */; };
+		668B785222402FCA006EF8F6 /* ScatterKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B785122402FCA006EF8F6 /* ScatterKitDelegate.swift */; };
+		668B785422402FDA006EF8F6 /* ScatterKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B785322402FDA006EF8F6 /* ScatterKitRequest.swift */; };
+		668B785622402FE3006EF8F6 /* ScatterKitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B785522402FE3006EF8F6 /* ScatterKitResponse.swift */; };
+		668B785822402FEB006EF8F6 /* ScatterKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B785722402FEB006EF8F6 /* ScatterKitError.swift */; };
+		668B785A22403078006EF8F6 /* ScatterKitResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 668B785922403078006EF8F6 /* ScatterKitResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +38,15 @@
 		663D8BFF22402391006271CD /* ScatterKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScatterKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		663D8C0422402391006271CD /* ScatterKitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterKitTests.swift; sourceTree = "<group>"; };
 		663D8C0622402391006271CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		66705EB82242E928002A603B /* ScatterKitTransaction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterKitTransaction.swift; sourceTree = "<group>"; };
+		66705EBA2242EF78002A603B /* Decodable+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Decodable+Extension.swift"; sourceTree = "<group>"; };
+		668B784D22402F4A006EF8F6 /* scatterkit_script.js */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.javascript; path = scatterkit_script.js; sourceTree = "<group>"; };
+		668B784F22402F98006EF8F6 /* ScatterKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterKit.swift; sourceTree = "<group>"; };
+		668B785122402FCA006EF8F6 /* ScatterKitDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterKitDelegate.swift; sourceTree = "<group>"; };
+		668B785322402FDA006EF8F6 /* ScatterKitRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterKitRequest.swift; sourceTree = "<group>"; };
+		668B785522402FE3006EF8F6 /* ScatterKitResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterKitResponse.swift; sourceTree = "<group>"; };
+		668B785722402FEB006EF8F6 /* ScatterKitError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterKitError.swift; sourceTree = "<group>"; };
+		668B785922403078006EF8F6 /* ScatterKitResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScatterKitResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,7 +89,7 @@
 		663D8BF822402391006271CD /* ScatterKit */ = {
 			isa = PBXGroup;
 			children = (
-				668B784C22402801006EF8F6 /* Sources */,
+				668B784C22402801006EF8F6 /* Source */,
 				663D8BF922402391006271CD /* ScatterKit.h */,
 				663D8BFA22402391006271CD /* Info.plist */,
 			);
@@ -87,11 +105,20 @@
 			path = ScatterKitTests;
 			sourceTree = "<group>";
 		};
-		668B784C22402801006EF8F6 /* Sources */ = {
+		668B784C22402801006EF8F6 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				668B784D22402F4A006EF8F6 /* scatterkit_script.js */,
+				668B784F22402F98006EF8F6 /* ScatterKit.swift */,
+				668B785122402FCA006EF8F6 /* ScatterKitDelegate.swift */,
+				668B785322402FDA006EF8F6 /* ScatterKitRequest.swift */,
+				668B785522402FE3006EF8F6 /* ScatterKitResponse.swift */,
+				668B785722402FEB006EF8F6 /* ScatterKitError.swift */,
+				668B785922403078006EF8F6 /* ScatterKitResult.swift */,
+				66705EB82242E928002A603B /* ScatterKitTransaction.swift */,
+				66705EBA2242EF78002A603B /* Decodable+Extension.swift */,
 			);
-			path = Sources;
+			path = Source;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +183,7 @@
 				TargetAttributes = {
 					663D8BF522402390006271CD = {
 						CreatedOnToolsVersion = 10.1;
+						LastSwiftMigration = 1010;
 					};
 					663D8BFE22402391006271CD = {
 						CreatedOnToolsVersion = 10.1;
@@ -185,6 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668B784E22402F4A006EF8F6 /* scatterkit_script.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -202,6 +231,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				668B785A22403078006EF8F6 /* ScatterKitResult.swift in Sources */,
+				668B785622402FE3006EF8F6 /* ScatterKitResponse.swift in Sources */,
+				66705EB92242E928002A603B /* ScatterKitTransaction.swift in Sources */,
+				668B785422402FDA006EF8F6 /* ScatterKitRequest.swift in Sources */,
+				668B785822402FEB006EF8F6 /* ScatterKitError.swift in Sources */,
+				668B785222402FCA006EF8F6 /* ScatterKitDelegate.swift in Sources */,
+				668B785022402F98006EF8F6 /* ScatterKit.swift in Sources */,
+				66705EBB2242EF78002A603B /* Decodable+Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -349,6 +386,7 @@
 		663D8C0B22402391006271CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -366,6 +404,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.paytomat.ScatterKit;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -374,6 +413,7 @@
 		663D8C0C22402391006271CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
@@ -399,6 +439,7 @@
 		663D8C0E22402391006271CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T58UC34VZ;
 				INFOPLIST_FILE = ScatterKitTests/Info.plist;
@@ -417,6 +458,7 @@
 		663D8C0F22402391006271CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 7T58UC34VZ;
 				INFOPLIST_FILE = ScatterKitTests/Info.plist;
