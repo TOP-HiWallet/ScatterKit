@@ -176,9 +176,8 @@ public class ScatterKit {
                         response = Response(request: request, code: .error, data: .error(error), message: errorMessage)
                     }
                 case .error(let error):
-                    let errorMessage = "Error \(error) in callback for request"
                     let error = ScatterKitError.result(error)
-                    response = Response(request: request, code: .error, data: .error(error), message: errorMessage)
+                    response = Response(request: request, code: .error, data: .error(error), message: "\(error)")
                 }
                 self?.sendResponse(response)
             }
