@@ -69,8 +69,8 @@ extension ScatterKit {
                 try container.encode(signature, forKey: .data)
             case .messageSignature(let messageSignature):
                 try container.encode(messageSignature, forKey: .data)
-            case .error:
-                break
+            case .error(let error):
+                try container.encode(message, forKey: .data)
             }
         }
     }
