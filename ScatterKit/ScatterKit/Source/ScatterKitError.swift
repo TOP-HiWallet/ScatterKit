@@ -34,6 +34,10 @@ public enum ScatterKitError: Swift.Error {
         case promptClosed = "prompt_closed"
         case upgradeRequired = "upgrade_required"
         case signatureRejected = "signature_rejected"
+        case identityMissing = "identity_missing"
+        case accountMissing = "account_missing"
+        case malformedRequirements = "malformed_requirements"
+        case noNetwork = "no_network"
     }
     
     public enum Code: Int, Encodable {
