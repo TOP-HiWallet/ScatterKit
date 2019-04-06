@@ -27,12 +27,16 @@ extension ScatterKit {
             case data
             case message
             case code
+            // error only
+            case isError
+            case type
         }
         
         enum Code: Int, Encodable {
             case success = 0
             case error = 1
         }
+        
         let request: Request
         let code: Code
         let data: Params
@@ -42,9 +46,23 @@ extension ScatterKit {
         
         public func encode(to encoder: Encoder) throws {
             var container = encoder.container(keyedBy: CodingKeys.self)
+            
+            if case let .error(error) = data {
+                let scatterError = error as? ScatterKitErrorConvertible
+                let errorMessage = scatterError?.scatterErrorMessage ?? message
+                let errorCode = scatterError?.scatterErrorCode?.rawValue ?? code.rawValue
+                
+                try container.encode(errorCode, forKey: .code)
+                try container.encode(errorMessage, forKey: .message)
+                try container.encode(true, forKey: .isError)
+                if let type = scatterError?.scatterErrorKind {
+                    try container.encode(type, forKey: .type)
+                }
+                return
+            }
             try container.encode(code, forKey: .code)
             try container.encode(message, forKey: .message)
-            switch self.data {
+            switch data {
             case .appInfo(let appInfo):
                 let appInfoData = AppInfoData(appInfo: appInfo,
                                               protocolName: ProtocolInfo.name,
@@ -69,8 +87,8 @@ extension ScatterKit {
                 try container.encode(signature, forKey: .data)
             case .messageSignature(let messageSignature):
                 try container.encode(messageSignature, forKey: .data)
-            case .error(let error):
-                try container.encode(message, forKey: .data)
+            case .error:
+                break
             }
         }
     }
