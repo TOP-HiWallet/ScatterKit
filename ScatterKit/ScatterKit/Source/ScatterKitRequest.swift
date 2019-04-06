@@ -110,7 +110,7 @@ extension ScatterKit.Request {
         public let to: String
         public let amount: Decimal
         public let symbol: String
-        public let memo: String
+        public let memo: String?
         public let contract: String
     }
     
@@ -178,7 +178,6 @@ extension ScatterKit.Request.Transfer: Decodable {
     }
     
     public init(from decoder: Decoder) throws {
-        
         let container = try decoder.container(keyedBy: CodingKeys.self)
         let quantity = try container.decode(String.self, forKey: .quantity)
         let quantityParts = quantity.split(separator: " ")
@@ -196,7 +195,7 @@ extension ScatterKit.Request.Transfer: Decodable {
         self.to = try container.decode(String.self, forKey: .to)
         self.amount = amount
         self.symbol = symbol
-        self.memo = try container.decodeIfPresent(String.self, forKey: .memo) ?? ""
+        self.memo = try container.decodeIfPresent(String.self, forKey: .memo)
         self.contract = try container.decode(String.self, forKey: .to)
     }
 }

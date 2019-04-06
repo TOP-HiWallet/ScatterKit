@@ -29,26 +29,22 @@ public class ScatterKit {
     private var scriptDelegate: ScriptMessageHandlerProxy!
     private let queue: DispatchQueue
     private let delegateQueue: DispatchQueue
-    private let timeout: TimeInterval
     
     public init(webView: WKWebView,
                 queue: DispatchQueue = DispatchQueue(label: "ScatterKit.background", attributes: .concurrent),
-                delegateQueue: DispatchQueue = .main,
-                timeout: TimeInterval = 30 * 60  /* 30 minutes */) {
-        guard timeout >= 0 else {
-            preconditionFailure("timeout cannot be negative")
-        }
+                delegateQueue: DispatchQueue = .main) {
         self.webView = webView
         self.queue = queue
         self.delegateQueue = delegateQueue
-        self.timeout = timeout
         self.scriptDelegate = ScriptMessageHandlerProxy(parent: self)
         injectJS()
         registerScripts()
     }
     
     deinit {
+        #if DEBUG
         print("\(ScatterKit.self): 🗑 deinit \(self)")
+        #endif
         webView?.configuration.userContentController.removeScriptMessageHandler(forName: "pushMessage")
     }
     
@@ -73,15 +69,17 @@ public class ScatterKit {
         content.insert(contentsOf: scriptString, at: content.startIndex)
         let end = content.index(before: content.endIndex)
         content.insert(contentsOf: "\";document.getElementsByTagName('head')[0].appendChild(SP_SCRIPT);", at: end)
+        #if DEBUG
         print("__SCATTER: content: \(content)")
-        
+        #endif
         let script = WKUserScript(source: content, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
         webView?.configuration.userContentController.addUserScript(script)
     }
     
     fileprivate func handleScriptMessage(_ message: WKScriptMessage) {
-        
+        #if DEBUG
         print("__SCATTER: name: \(message.name), body: \(message.body)")
+        #endif
         let body = message.body
         queue.async { [weak self] in
             guard let string = body as? String else {
@@ -97,7 +95,9 @@ public class ScatterKit {
             do {
                 request = try JSONDecoder().decode(Request.self, from: data)
             } catch {
+                #if DEBUG
                 print("__SCATTER: request error: \(error)")
+                #endif
                 self?.asyncError(error, during: .request)
                 return
             }
@@ -163,12 +163,7 @@ public class ScatterKit {
     }
     
     private func makeResultCallback<T>(request: Request, parseResponse: @escaping (T) throws -> Response) -> SKCallback<T> {
-        let timeoutDate = Date().addingTimeInterval(timeout)
         return { [weak self] result in
-            guard Date() < timeoutDate else {
-                // already timed out
-                return
-            }
             self?.queue.async {
                 let response: Response
                 switch result {
@@ -204,14 +199,17 @@ public class ScatterKit {
             let json = String(bytes: responseData, encoding: .utf8)!
             let js = String(format: "%@('%@')", response.request.methodName.rawValue, json)
             //let js = String(format: "%@('%@','%@')", "callbackResult", request.serialNumber, json)
+            #if DEBUG
             print("__SCATTER: javascript: \(js)")
-            
+            #endif
             DispatchQueue.main.async { [weak self] in
                 self?.webView?.evaluateJavaScript(js) { result, error in
                     if let error = error {
                         self?.asyncError(error, during: .javascriptEvaluation)
                     }
+                    #if DEBUG
                     print("__SCATTER: evaluated: \(result), \(error) using: \(js)")
+                    #endif
                 }
             }
             if case let .error(error) = response.data {
@@ -236,14 +234,6 @@ public class ScatterKit {
                 let response = Response(request: request, code: .error, data: .error(error), message: errorMessage)
                 self?.sendResponse(response)
             }
-        }
-        
-        delegateQueue.asyncAfter(deadline: .now() + timeout) { [weak self] in
-            // client timed out, create timeout error and send response
-            let errorMessage = "Timeout when awaiting \(request) callback"
-            let error = ScatterKitError.timeout
-            let response = Response(request: request, code: .error, data: .error(error), message: errorMessage)
-            self?.sendResponse(response)
         }
     }
 
@@ -271,7 +261,9 @@ fileprivate class ScriptMessageHandlerProxy: NSObject, WKScriptMessageHandler {
     }
     
     deinit {
+        #if DEBUG
         print("\(ScatterKit.self): 🗑 deinit \(self)")
+        #endif
     }
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
@@ -289,7 +281,9 @@ fileprivate class ScriptMessageHandlerLeakAvoider: NSObject, WKScriptMessageHand
     }
     
     deinit {
+        #if DEBUG
         print("\(ScatterKit.self): 🗑 deinit \(self)")
+        #endif
     }
     
     func userContentController(_ userContentController: WKUserContentController, didReceive message: WKScriptMessage) {
