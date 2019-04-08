@@ -81,6 +81,7 @@ enum ScatterErrors: Error {
     case transactionSignatureCancel
     case signatureFailed
 }
+
 // Implement ScatterKitErrorConvertible protocol
 extension ScatterErrors: ScatterKitErrorConvertible {
     var scatterErrorMessage: String? {
