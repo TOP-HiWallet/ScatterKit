@@ -34,7 +34,7 @@ public extension ScatterKitDelegate {
         throw ScatterKitError.unimplemented
     }
     
-    func scatterDidRequestAccountName(_ handler: @escaping SKCallback<String>) throws {
+    func scatterDidRequestAccountName(_ completionHandler: @escaping SKCallback<String>) throws {
         throw ScatterKitError.unimplemented
     }
     
