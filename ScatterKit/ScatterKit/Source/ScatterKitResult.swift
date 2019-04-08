@@ -9,7 +9,7 @@
 import Foundation
 
 public extension ScatterKit {
-    public enum Result<SuccessType> {
+    enum Result<SuccessType> {
         case success(SuccessType)
         case error(Error)
     }
