@@ -17,7 +17,7 @@ ScatterKit allows communication between Swift applications and web pages that us
   s.ios.deployment_target = '9.0'
   s.requires_arc = true
 
-  s.source       = { :git => "https://github.com/a-melnichuk/ScatterKit.git", :branch => "master", :tag => s.version.to_s }
+  s.source       = { :git => "https://github.com/paytomat/ScatterKit.git", :branch => "master", :tag => s.version.to_s }
 
   s.source_files  = "ScatterKit/ScatterKit/Source/**/*.swift"
   s.resource_bundles = {
