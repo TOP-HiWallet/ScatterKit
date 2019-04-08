@@ -1,6 +1,6 @@
 Scatter Kit 
 ==============
-ScatterKit simulates Scatter plugin for EOS cryptocurrency in WKWebView, and allows client apps to:
+ScatterKit simulates Scatter plugin for EOS blockchain in WKWebView, and allows client apps to:
 - Retrieve account
 - Sign transactions
 - Sign arbitrary messages
@@ -18,6 +18,8 @@ import ScatterKit
 
 class YourViewController: BaseViewController {
 
+    private var scatterKit: ScatterKit!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // create webview with configuration
@@ -25,7 +27,7 @@ class YourViewController: BaseViewController {
         // webView.navigationDelegate = self
         // ... other setup
         
-        // configure ScatterKit, after WKWebView configuration 
+        // configure ScatterKit after WKWebView configuration 
         scatterKit = ScatterKit(webView: webView)
         scatterKit.delegate = self
     }
