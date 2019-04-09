@@ -8,24 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		0B22576A0888B4FB1477D39BFF93820E /* Pods-Examples-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 69AC0E08FD8F1BA117975FF2BB4AD093 /* Pods-Examples-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0C8F2C15D297A3B21046644BA9B619D3 /* ScatterKitResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F3146353A6E105329A72EF7D2E19C98 /* ScatterKitResult.swift */; };
+		1409D6731C42ACD8A28045730134DD0B /* ScatterKitTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C41140D63B556E0E3AFFCAA0F63B7B4 /* ScatterKitTransaction.swift */; };
 		1C65478AA02E4820E75AF436F25940D3 /* Pods-Examples-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B9185230849E3E47EDE74FE35C40712E /* Pods-Examples-dummy.m */; };
-		26126082F5F807C3273CE8D86F684A9F /* Resources in Resources */ = {isa = PBXBuildFile; fileRef = 64E8A6065F68441F81FD4F9B0575C988 /* Resources */; };
-		39D7E4CCE325377450FD690494D4E473 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFCFFE0C42632E218CEC904D9C032A6 /* Foundation.framework */; };
-		4F7E11ADE1093FED1AD027ACB34090B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFCFFE0C42632E218CEC904D9C032A6 /* Foundation.framework */; };
+		2854BE8EDF320E3FEE55302E4889502A /* ScatterKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87A675140D3190901ED3B58ACD09A5C9 /* ScatterKitError.swift */; };
+		2A1C7DF721D2F7CE3EFF3AFF545E8518 /* ScatterKit.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 02A1F02019B303FFA81A538AC2DFA9AA /* ScatterKit.bundle */; };
+		4F7E11ADE1093FED1AD027ACB34090B9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB539FE9001200E730C55AC01B72A395 /* Foundation.framework */; };
 		5874A20C2A4B47D15EFB646F7D0C6B77 /* Pods-ExamplesTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 053CF5B182C8E438E123DF1BC2847BED /* Pods-ExamplesTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		64B990AEF843B9CC51E84DA8AAEF35B9 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFCBA66EE97D061189FF20FA89C422E1 /* CoreFoundation.framework */; };
-		6DDB4AE5CCB1C4293E73317724C9969C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EC71F4EC0FB1F2A28840242B127C81E5 /* UIKit.framework */; };
-		795E8F4C677DA119F81EE5A167549653 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E8D6FA50D56152912DD97F15779788B /* WebKit.framework */; };
-		7F372CACDD1FDD66D2D203FB7736787A /* ScatterKitError.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB9060880AB34BFF1B2BC9F6B87F6CCB /* ScatterKitError.swift */; };
-		87257768E3F0ECFFCE7143B2D93EA42A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AFCFFE0C42632E218CEC904D9C032A6 /* Foundation.framework */; };
+		5BE61BFD73F39D25472788CE816D369E /* Decodable+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D9E08C625558BCFDE390751DEBCAB7 /* Decodable+Extension.swift */; };
+		600E88A560B7DE6530865274A4EE8B01 /* ScatterKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88DD392B5C26252607BCF7CC4D06F4AB /* ScatterKitDelegate.swift */; };
+		87257768E3F0ECFFCE7143B2D93EA42A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB539FE9001200E730C55AC01B72A395 /* Foundation.framework */; };
+		8B529F180ED49B3B0050FFAD2D1EA98A /* ScatterKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68DB08DE482C173EAAB23DB2F0DA4ED7 /* ScatterKitRequest.swift */; };
+		8F17F4138C1E1D8D7707E5F14EBA55CA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 802C2F2E78E6EAB7AE35C347DB438819 /* UIKit.framework */; };
 		9F0D8B361FC26E3F219999E9840466DC /* Pods-ExamplesTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0A88B9ACCB7B5F953386DF353708A119 /* Pods-ExamplesTests-dummy.m */; };
-		A276E1F65FEC3C49E8C130728240281D /* ScatterKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB49A298E468AE05A69494072314E33 /* ScatterKit.swift */; };
-		ACA36CCD794301DC3142BE1F955ED44E /* ScatterKitResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90F1677B950AA96415D361E24F9A1D8 /* ScatterKitResult.swift */; };
-		AE73F89E128A37332C9514A7599EB586 /* ScatterKitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F470FAB2A87753E9D2AA18CEB8CF117D /* ScatterKitResponse.swift */; };
-		B4BE6ED4389AF750FC0F85BB280A84FF /* ScatterKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FED81DA12525108754BF227ECE315D46 /* ScatterKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		C305F23A18F47279A7538E026089087A /* ScatterKitDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8A83583E896501F3DE34B4417D7AE3A /* ScatterKitDelegate.swift */; };
-		FAE4D1E0472AADA77418AFB297D71955 /* ScatterKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 05640AE1D38AC450543F81C375A9FF7F /* ScatterKit-dummy.m */; };
-		FCC40B6CB5AF4A67036D93B06B30D7B1 /* ScatterKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0935CF958FE52CD48C753E24E820389D /* ScatterKitRequest.swift */; };
+		A263E815BF6987AF25BBE232F7F274D1 /* scatterkit_script.js in Resources */ = {isa = PBXBuildFile; fileRef = 08CFD80D843C3577550CEF09AD1DDCFD /* scatterkit_script.js */; };
+		A2810E9FE3A92AB39F8200B37E6A4352 /* ScatterKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6860906CF95A3F092D8DB84B080C5D8E /* ScatterKit.swift */; };
+		B4BE6ED4389AF750FC0F85BB280A84FF /* ScatterKit-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2D4E2E4E027CD90FC23F044589D76C50 /* ScatterKit-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBE052C6A51149A9DBFDE098DB37E634 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB539FE9001200E730C55AC01B72A395 /* Foundation.framework */; };
+		D64537D8E8F2CEF061F647061B8B59E2 /* ScatterKitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6900DBA834E7B1EDB0BFCCCAD64980 /* ScatterKitResponse.swift */; };
+		DF01BAF4ED19B62CB4692ED394E4131F /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2AA4639F93492BE928E8329E7AD64C61 /* WebKit.framework */; };
+		E3ACAB02E870381CD647928107636B4A /* ScatterKit-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 92175E18DB4BD229E8FD928DBF129713 /* ScatterKit-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,57 +45,82 @@
 			remoteGlobalIDString = 3CAF82DE1B398AAA7C41C687B72E101B;
 			remoteInfo = ScatterKit;
 		};
+		DE2D6C721E184ED84576A2FB34C9F77A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A3E051EC8F68EF6E24764C2ECC96E02A;
+			remoteInfo = "ScatterKit-ScatterKit";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		02F96E3345DE5C8BB5EF8D25FE091F88 /* ScatterKit.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ScatterKit.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		02A1F02019B303FFA81A538AC2DFA9AA /* ScatterKit.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = ScatterKit.bundle; path = "ScatterKit-ScatterKit.bundle"; sourceTree = BUILT_PRODUCTS_DIR; };
 		053CF5B182C8E438E123DF1BC2847BED /* Pods-ExamplesTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ExamplesTests-umbrella.h"; sourceTree = "<group>"; };
-		05640AE1D38AC450543F81C375A9FF7F /* ScatterKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScatterKit-dummy.m"; sourceTree = "<group>"; };
-		0935CF958FE52CD48C753E24E820389D /* ScatterKitRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitRequest.swift; path = ScatterKit/ScatterKit/Source/ScatterKitRequest.swift; sourceTree = "<group>"; };
+		05D9E08C625558BCFDE390751DEBCAB7 /* Decodable+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Decodable+Extension.swift"; path = "ScatterKit/ScatterKit/Source/Decodable+Extension.swift"; sourceTree = "<group>"; };
+		08CFD80D843C3577550CEF09AD1DDCFD /* scatterkit_script.js */ = {isa = PBXFileReference; includeInIndex = 1; name = scatterkit_script.js; path = ScatterKit/ScatterKit/Source/scatterkit_script.js; sourceTree = "<group>"; };
 		0A88B9ACCB7B5F953386DF353708A119 /* Pods-ExamplesTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ExamplesTests-dummy.m"; sourceTree = "<group>"; };
 		1AA81F5F46842735E42EC9826E899F2F /* Pods-ExamplesTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExamplesTests-Info.plist"; sourceTree = "<group>"; };
 		22D1CAC94363061DEDA5A0E6ECABBCB4 /* Pods-ExamplesTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExamplesTests.release.xcconfig"; sourceTree = "<group>"; };
-		2456BE43739F1B56E7EF489BA20703EB /* ScatterKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScatterKit-prefix.pch"; sourceTree = "<group>"; };
-		2CAD9ED8AAA44D33C38746020B69C2A3 /* LICENSE.md */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE.md; sourceTree = "<group>"; };
+		2A6900DBA834E7B1EDB0BFCCCAD64980 /* ScatterKitResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitResponse.swift; path = ScatterKit/ScatterKit/Source/ScatterKitResponse.swift; sourceTree = "<group>"; };
+		2AA4639F93492BE928E8329E7AD64C61 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		2D4E2E4E027CD90FC23F044589D76C50 /* ScatterKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScatterKit-umbrella.h"; sourceTree = "<group>"; };
+		2F3146353A6E105329A72EF7D2E19C98 /* ScatterKitResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitResult.swift; path = ScatterKit/ScatterKit/Source/ScatterKitResult.swift; sourceTree = "<group>"; };
 		32BC9C0656B0912061A584250DEDD89C /* Pods-ExamplesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ExamplesTests.debug.xcconfig"; sourceTree = "<group>"; };
+		391E76CBCC3F8A7AAB989D2778641700 /* ScatterKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScatterKit.xcconfig; sourceTree = "<group>"; };
 		3A19FEFC6FD87E8AD32CCF0D13B6023C /* Pods-Examples.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Examples.release.xcconfig"; sourceTree = "<group>"; };
-		3E8D6FA50D56152912DD97F15779788B /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/WebKit.framework; sourceTree = DEVELOPER_DIR; };
+		3EB2CDD08A4DAAE02095CB642DB294A7 /* ScatterKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ScatterKit-Info.plist"; sourceTree = "<group>"; };
 		434BEF26DD5CCEA2E1342304E3FEF2E6 /* Pods-Examples-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Examples-Info.plist"; sourceTree = "<group>"; };
+		4C41140D63B556E0E3AFFCAA0F63B7B4 /* ScatterKitTransaction.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitTransaction.swift; path = ScatterKit/ScatterKit/Source/ScatterKitTransaction.swift; sourceTree = "<group>"; };
+		4C630236ABA503EEF7FC0173D3EC7001 /* ResourceBundle-ScatterKit-ScatterKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-ScatterKit-ScatterKit-Info.plist"; sourceTree = "<group>"; };
 		52EB9595F8234295FBC2B8D08C030745 /* Pods-Examples-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Examples-frameworks.sh"; sourceTree = "<group>"; };
-		64E8A6065F68441F81FD4F9B0575C988 /* Resources */ = {isa = PBXFileReference; includeInIndex = 1; name = Resources; path = ScatterKit/ScatterKit/Resources; sourceTree = "<group>"; };
+		623714718C827CEE1D6D77A9DBF8CAC9 /* Pods_Examples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Examples.framework; path = "Pods-Examples.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6860906CF95A3F092D8DB84B080C5D8E /* ScatterKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKit.swift; path = ScatterKit/ScatterKit/Source/ScatterKit.swift; sourceTree = "<group>"; };
+		68DB08DE482C173EAAB23DB2F0DA4ED7 /* ScatterKitRequest.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitRequest.swift; path = ScatterKit/ScatterKit/Source/ScatterKitRequest.swift; sourceTree = "<group>"; };
 		69AC0E08FD8F1BA117975FF2BB4AD093 /* Pods-Examples-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Examples-umbrella.h"; sourceTree = "<group>"; };
-		6AFCFFE0C42632E218CEC904D9C032A6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		736A60ECF9EEFFBB81580CC62392C934 /* Pods_ExamplesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExamplesTests.framework; path = "Pods-ExamplesTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		81DD846553DBC4292951FCBF0F003C1D /* ScatterKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ScatterKit.modulemap; sourceTree = "<group>"; };
+		799FB577F10A08EE654000B1A1653C25 /* ScatterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ScatterKit.framework; path = ScatterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		802C2F2E78E6EAB7AE35C347DB438819 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		8300F7FBFED38FA684BE1F5598DCD817 /* ScatterKit.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ScatterKit.modulemap; sourceTree = "<group>"; };
 		86051E454D92429AF38637710A5C9515 /* Pods-Examples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Examples.debug.xcconfig"; sourceTree = "<group>"; };
-		8755EEB266F03D961BD16AB6378AFBBC /* ScatterKit.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScatterKit.xcconfig; sourceTree = "<group>"; };
+		87A675140D3190901ED3B58ACD09A5C9 /* ScatterKitError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitError.swift; path = ScatterKit/ScatterKit/Source/ScatterKitError.swift; sourceTree = "<group>"; };
+		88DD392B5C26252607BCF7CC4D06F4AB /* ScatterKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitDelegate.swift; path = ScatterKit/ScatterKit/Source/ScatterKitDelegate.swift; sourceTree = "<group>"; };
+		92175E18DB4BD229E8FD928DBF129713 /* ScatterKit-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScatterKit-dummy.m"; sourceTree = "<group>"; };
 		93158677B3CC18721D5D44A3C42AFDDD /* Pods-Examples.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Examples.modulemap"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		A0AFBA2C78CB386EB30DAB4D1CDD2313 /* Pods-ExamplesTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ExamplesTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A404D368799AED162677B9925FBB51E2 /* Pods_ExamplesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ExamplesTests.framework; path = "Pods-ExamplesTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A51BA3A1B49D5A27F4889807577CB794 /* ScatterKit-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScatterKit-prefix.pch"; sourceTree = "<group>"; };
 		A820A8A777A0F127CD9F220D3884F5A3 /* Pods-Examples-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Examples-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A8A83583E896501F3DE34B4417D7AE3A /* ScatterKitDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitDelegate.swift; path = ScatterKit/ScatterKit/Source/ScatterKitDelegate.swift; sourceTree = "<group>"; };
 		AC22F1BCF576E485475067D740988B14 /* Pods-ExamplesTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ExamplesTests-acknowledgements.plist"; sourceTree = "<group>"; };
-		AFCBA66EE97D061189FF20FA89C422E1 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
-		B83B00188AA5D9548A0FD4F5C7C95F91 /* Pods_Examples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Examples.framework; path = "Pods-Examples.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B9185230849E3E47EDE74FE35C40712E /* Pods-Examples-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Examples-dummy.m"; sourceTree = "<group>"; };
-		C120E60914B87F7E5626C8545810408A /* ScatterKit-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ScatterKit-Info.plist"; sourceTree = "<group>"; };
-		C90F1677B950AA96415D361E24F9A1D8 /* ScatterKitResult.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitResult.swift; path = ScatterKit/ScatterKit/Source/ScatterKitResult.swift; sourceTree = "<group>"; };
 		DD5DAE2A2718979779F40194F1BE0559 /* Pods-Examples-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Examples-acknowledgements.plist"; sourceTree = "<group>"; };
-		EB9060880AB34BFF1B2BC9F6B87F6CCB /* ScatterKitError.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitError.swift; path = ScatterKit/ScatterKit/Source/ScatterKitError.swift; sourceTree = "<group>"; };
-		EC71F4EC0FB1F2A28840242B127C81E5 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		F470FAB2A87753E9D2AA18CEB8CF117D /* ScatterKitResponse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKitResponse.swift; path = ScatterKit/ScatterKit/Source/ScatterKitResponse.swift; sourceTree = "<group>"; };
-		F769D0A3F86C4B3CAC45CDC2C11CE7E9 /* ScatterKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ScatterKit.framework; path = ScatterKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB539FE9001200E730C55AC01B72A395 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		FA994E06E2852B279132C07AB1C3E2A2 /* Pods-ExamplesTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ExamplesTests.modulemap"; sourceTree = "<group>"; };
-		FDB49A298E468AE05A69494072314E33 /* ScatterKit.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScatterKit.swift; path = ScatterKit/ScatterKit/Source/ScatterKit.swift; sourceTree = "<group>"; };
-		FED81DA12525108754BF227ECE315D46 /* ScatterKit-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScatterKit-umbrella.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		71723F159B7ECAF74A58F95BBAD27E24 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		8D646911242F23F97B5CC97D7813BB60 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				4F7E11ADE1093FED1AD027ACB34090B9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBF1AD71E6851F3A3FA691DB20685339 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBE052C6A51149A9DBFDE098DB37E634 /* Foundation.framework in Frameworks */,
+				8F17F4138C1E1D8D7707E5F14EBA55CA /* UIKit.framework in Frameworks */,
+				DF01BAF4ED19B62CB4692ED394E4131F /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -105,77 +132,59 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		FD5A8F078B2AC78D9B0965F662BCE15F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				64B990AEF843B9CC51E84DA8AAEF35B9 /* CoreFoundation.framework in Frameworks */,
-				39D7E4CCE325377450FD690494D4E473 /* Foundation.framework in Frameworks */,
-				6DDB4AE5CCB1C4293E73317724C9969C /* UIKit.framework in Frameworks */,
-				795E8F4C677DA119F81EE5A167549653 /* WebKit.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		08BA3B4A9DA8D05353022B742B0DC612 /* Support Files */ = {
+		03C5C200A0787E300053CFA8F53CA094 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				81DD846553DBC4292951FCBF0F003C1D /* ScatterKit.modulemap */,
-				8755EEB266F03D961BD16AB6378AFBBC /* ScatterKit.xcconfig */,
-				05640AE1D38AC450543F81C375A9FF7F /* ScatterKit-dummy.m */,
-				C120E60914B87F7E5626C8545810408A /* ScatterKit-Info.plist */,
-				2456BE43739F1B56E7EF489BA20703EB /* ScatterKit-prefix.pch */,
-				FED81DA12525108754BF227ECE315D46 /* ScatterKit-umbrella.h */,
+				04CD90878119676431683045EDC84102 /* iOS */,
 			);
-			name = "Support Files";
-			path = "Examples/Pods/Target Support Files/ScatterKit";
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		28ACFE50804901D45B1FE111F531B75A /* Development Pods */ = {
+		04CD90878119676431683045EDC84102 /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				2D69C2DCE9A9612CBE2A350688B0CEAF /* ScatterKit */,
-			);
-			name = "Development Pods";
-			sourceTree = "<group>";
-		};
-		2D69C2DCE9A9612CBE2A350688B0CEAF /* ScatterKit */ = {
-			isa = PBXGroup;
-			children = (
-				FDB49A298E468AE05A69494072314E33 /* ScatterKit.swift */,
-				A8A83583E896501F3DE34B4417D7AE3A /* ScatterKitDelegate.swift */,
-				EB9060880AB34BFF1B2BC9F6B87F6CCB /* ScatterKitError.swift */,
-				0935CF958FE52CD48C753E24E820389D /* ScatterKitRequest.swift */,
-				F470FAB2A87753E9D2AA18CEB8CF117D /* ScatterKitResponse.swift */,
-				C90F1677B950AA96415D361E24F9A1D8 /* ScatterKitResult.swift */,
-				39DA413B391DEBF2277320A90051E03D /* Pod */,
-				C567DC0459B2A8E1D4455DCEFE0F169E /* Resources */,
-				08BA3B4A9DA8D05353022B742B0DC612 /* Support Files */,
-			);
-			name = ScatterKit;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		39DA413B391DEBF2277320A90051E03D /* Pod */ = {
-			isa = PBXGroup;
-			children = (
-				2CAD9ED8AAA44D33C38746020B69C2A3 /* LICENSE.md */,
-				02F96E3345DE5C8BB5EF8D25FE091F88 /* ScatterKit.podspec */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		67B4020C65C114C299050C26667466E0 /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				AFCBA66EE97D061189FF20FA89C422E1 /* CoreFoundation.framework */,
-				6AFCFFE0C42632E218CEC904D9C032A6 /* Foundation.framework */,
-				EC71F4EC0FB1F2A28840242B127C81E5 /* UIKit.framework */,
-				3E8D6FA50D56152912DD97F15779788B /* WebKit.framework */,
+				EB539FE9001200E730C55AC01B72A395 /* Foundation.framework */,
+				802C2F2E78E6EAB7AE35C347DB438819 /* UIKit.framework */,
+				2AA4639F93492BE928E8329E7AD64C61 /* WebKit.framework */,
 			);
 			name = iOS;
+			sourceTree = "<group>";
+		};
+		1E2129E7ECBB5FF875317B151C2FA0D5 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				08CFD80D843C3577550CEF09AD1DDCFD /* scatterkit_script.js */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		68A613A619DA68519EF1DA9906EF259A /* ScatterKit */ = {
+			isa = PBXGroup;
+			children = (
+				05D9E08C625558BCFDE390751DEBCAB7 /* Decodable+Extension.swift */,
+				6860906CF95A3F092D8DB84B080C5D8E /* ScatterKit.swift */,
+				88DD392B5C26252607BCF7CC4D06F4AB /* ScatterKitDelegate.swift */,
+				87A675140D3190901ED3B58ACD09A5C9 /* ScatterKitError.swift */,
+				68DB08DE482C173EAAB23DB2F0DA4ED7 /* ScatterKitRequest.swift */,
+				2A6900DBA834E7B1EDB0BFCCCAD64980 /* ScatterKitResponse.swift */,
+				2F3146353A6E105329A72EF7D2E19C98 /* ScatterKitResult.swift */,
+				4C41140D63B556E0E3AFFCAA0F63B7B4 /* ScatterKitTransaction.swift */,
+				1E2129E7ECBB5FF875317B151C2FA0D5 /* Resources */,
+				AFE7BF020DBA6DF85FE1DD4EFD83320F /* Support Files */,
+			);
+			name = ScatterKit;
+			path = ScatterKit;
+			sourceTree = "<group>";
+		};
+		7DC942E7FE55DC0146704DB47B01AC62 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				68A613A619DA68519EF1DA9906EF259A /* ScatterKit */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		98C466CCD383BFAF061A6A6943C6545A /* Pods-ExamplesTests */ = {
@@ -211,12 +220,19 @@
 			path = "Target Support Files/Pods-Examples";
 			sourceTree = "<group>";
 		};
-		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
+		AFE7BF020DBA6DF85FE1DD4EFD83320F /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				67B4020C65C114C299050C26667466E0 /* iOS */,
+				4C630236ABA503EEF7FC0173D3EC7001 /* ResourceBundle-ScatterKit-ScatterKit-Info.plist */,
+				8300F7FBFED38FA684BE1F5598DCD817 /* ScatterKit.modulemap */,
+				391E76CBCC3F8A7AAB989D2778641700 /* ScatterKit.xcconfig */,
+				92175E18DB4BD229E8FD928DBF129713 /* ScatterKit-dummy.m */,
+				3EB2CDD08A4DAAE02095CB642DB294A7 /* ScatterKit-Info.plist */,
+				A51BA3A1B49D5A27F4889807577CB794 /* ScatterKit-prefix.pch */,
+				2D4E2E4E027CD90FC23F044589D76C50 /* ScatterKit-umbrella.h */,
 			);
-			name = Frameworks;
+			name = "Support Files";
+			path = "../Target Support Files/ScatterKit";
 			sourceTree = "<group>";
 		};
 		C4292A6D2A6B841256DCB7C96B0338A4 /* Targets Support Files */ = {
@@ -228,33 +244,26 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		C567DC0459B2A8E1D4455DCEFE0F169E /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				64E8A6065F68441F81FD4F9B0575C988 /* Resources */,
-			);
-			name = Resources;
-			sourceTree = "<group>";
-		};
-		CED2440F0D4B1E3225A9A933A0BC24AA /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				B83B00188AA5D9548A0FD4F5C7C95F91 /* Pods_Examples.framework */,
-				736A60ECF9EEFFBB81580CC62392C934 /* Pods_ExamplesTests.framework */,
-				F769D0A3F86C4B3CAC45CDC2C11CE7E9 /* ScatterKit.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				28ACFE50804901D45B1FE111F531B75A /* Development Pods */,
-				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
-				CED2440F0D4B1E3225A9A933A0BC24AA /* Products */,
+				03C5C200A0787E300053CFA8F53CA094 /* Frameworks */,
+				7DC942E7FE55DC0146704DB47B01AC62 /* Pods */,
+				F437F7099742D755B1310E4CE6146642 /* Products */,
 				C4292A6D2A6B841256DCB7C96B0338A4 /* Targets Support Files */,
 			);
+			sourceTree = "<group>";
+		};
+		F437F7099742D755B1310E4CE6146642 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				623714718C827CEE1D6D77A9DBF8CAC9 /* Pods_Examples.framework */,
+				A404D368799AED162677B9925FBB51E2 /* Pods_ExamplesTests.framework */,
+				02A1F02019B303FFA81A538AC2DFA9AA /* ScatterKit.bundle */,
+				799FB577F10A08EE654000B1A1653C25 /* ScatterKit.framework */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -303,7 +312,7 @@
 			);
 			name = "Pods-Examples";
 			productName = "Pods-Examples";
-			productReference = B83B00188AA5D9548A0FD4F5C7C95F91 /* Pods_Examples.framework */;
+			productReference = 623714718C827CEE1D6D77A9DBF8CAC9 /* Pods_Examples.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		3CAF82DE1B398AAA7C41C687B72E101B /* ScatterKit */ = {
@@ -311,18 +320,36 @@
 			buildConfigurationList = 2FCE95A0FCEA7C25343C31D9EF307055 /* Build configuration list for PBXNativeTarget "ScatterKit" */;
 			buildPhases = (
 				009839AB5A6726CB51CC207237EFE029 /* Headers */,
-				D30A8F56A46A3C5E7684D5C25037E4B9 /* Sources */,
-				FD5A8F078B2AC78D9B0965F662BCE15F /* Frameworks */,
-				41BF123794BECB4BA15D44D88D236DB5 /* Resources */,
+				50DA8B773A5208578EBCC77302F7CED5 /* Sources */,
+				DBF1AD71E6851F3A3FA691DB20685339 /* Frameworks */,
+				CFA19BF4DA85D387E1EA399B47ED3D0F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BCA38CFD6C124FEA59F2789813864AD8 /* PBXTargetDependency */,
+			);
+			name = ScatterKit;
+			productName = ScatterKit;
+			productReference = 799FB577F10A08EE654000B1A1653C25 /* ScatterKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A3E051EC8F68EF6E24764C2ECC96E02A /* ScatterKit-ScatterKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = ECA8333756CCCE037E05751EE040DB49 /* Build configuration list for PBXNativeTarget "ScatterKit-ScatterKit" */;
+			buildPhases = (
+				2B65A610891E08EC5547BF7E6AB17735 /* Sources */,
+				71723F159B7ECAF74A58F95BBAD27E24 /* Frameworks */,
+				95166424C549488AD6613A5DF787080D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = ScatterKit;
-			productName = ScatterKit;
-			productReference = F769D0A3F86C4B3CAC45CDC2C11CE7E9 /* ScatterKit.framework */;
-			productType = "com.apple.product-type.framework";
+			name = "ScatterKit-ScatterKit";
+			productName = "ScatterKit-ScatterKit";
+			productReference = 02A1F02019B303FFA81A538AC2DFA9AA /* ScatterKit.bundle */;
+			productType = "com.apple.product-type.bundle";
 		};
 		CD6CC7F7ACB2EB7FE46D2D3D71215065 /* Pods-ExamplesTests */ = {
 			isa = PBXNativeTarget;
@@ -340,7 +367,7 @@
 			);
 			name = "Pods-ExamplesTests";
 			productName = "Pods-ExamplesTests";
-			productReference = 736A60ECF9EEFFBB81580CC62392C934 /* Pods_ExamplesTests.framework */;
+			productReference = A404D368799AED162677B9925FBB51E2 /* Pods_ExamplesTests.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -360,23 +387,24 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = CED2440F0D4B1E3225A9A933A0BC24AA /* Products */;
+			productRefGroup = F437F7099742D755B1310E4CE6146642 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				0B5713951D8BC7535C0ABF70DCC5F215 /* Pods-Examples */,
 				CD6CC7F7ACB2EB7FE46D2D3D71215065 /* Pods-ExamplesTests */,
 				3CAF82DE1B398AAA7C41C687B72E101B /* ScatterKit */,
+				A3E051EC8F68EF6E24764C2ECC96E02A /* ScatterKit-ScatterKit */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		41BF123794BECB4BA15D44D88D236DB5 /* Resources */ = {
+		95166424C549488AD6613A5DF787080D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				26126082F5F807C3273CE8D86F684A9F /* Resources in Resources */,
+				A263E815BF6987AF25BBE232F7F274D1 /* scatterkit_script.js in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -384,6 +412,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CFA19BF4DA85D387E1EA399B47ED3D0F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2A1C7DF721D2F7CE3EFF3AFF545E8518 /* ScatterKit.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -413,17 +449,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D30A8F56A46A3C5E7684D5C25037E4B9 /* Sources */ = {
+		2B65A610891E08EC5547BF7E6AB17735 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FAE4D1E0472AADA77418AFB297D71955 /* ScatterKit-dummy.m in Sources */,
-				A276E1F65FEC3C49E8C130728240281D /* ScatterKit.swift in Sources */,
-				C305F23A18F47279A7538E026089087A /* ScatterKitDelegate.swift in Sources */,
-				7F372CACDD1FDD66D2D203FB7736787A /* ScatterKitError.swift in Sources */,
-				FCC40B6CB5AF4A67036D93B06B30D7B1 /* ScatterKitRequest.swift in Sources */,
-				AE73F89E128A37332C9514A7599EB586 /* ScatterKitResponse.swift in Sources */,
-				ACA36CCD794301DC3142BE1F955ED44E /* ScatterKitResult.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		50DA8B773A5208578EBCC77302F7CED5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BE61BFD73F39D25472788CE816D369E /* Decodable+Extension.swift in Sources */,
+				E3ACAB02E870381CD647928107636B4A /* ScatterKit-dummy.m in Sources */,
+				A2810E9FE3A92AB39F8200B37E6A4352 /* ScatterKit.swift in Sources */,
+				600E88A560B7DE6530865274A4EE8B01 /* ScatterKitDelegate.swift in Sources */,
+				2854BE8EDF320E3FEE55302E4889502A /* ScatterKitError.swift in Sources */,
+				8B529F180ED49B3B0050FFAD2D1EA98A /* ScatterKitRequest.swift in Sources */,
+				D64537D8E8F2CEF061F647061B8B59E2 /* ScatterKitResponse.swift in Sources */,
+				0C8F2C15D297A3B21046644BA9B619D3 /* ScatterKitResult.swift in Sources */,
+				1409D6731C42ACD8A28045730134DD0B /* ScatterKitTransaction.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +481,12 @@
 			target = 0B5713951D8BC7535C0ABF70DCC5F215 /* Pods-Examples */;
 			targetProxy = 8BFA0F00E04B4D7E1AC937A55A854D25 /* PBXContainerItemProxy */;
 		};
+		BCA38CFD6C124FEA59F2789813864AD8 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "ScatterKit-ScatterKit";
+			target = A3E051EC8F68EF6E24764C2ECC96E02A /* ScatterKit-ScatterKit */;
+			targetProxy = DE2D6C721E184ED84576A2FB34C9F77A /* PBXContainerItemProxy */;
+		};
 		DA0FF52E21BC1BA51F3F4E6968FB6BB4 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ScatterKit;
@@ -445,6 +496,38 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		004817B613D861541D4A18314456E5F3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 391E76CBCC3F8A7AAB989D2778641700 /* ScatterKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ScatterKit";
+				INFOPLIST_FILE = "Target Support Files/ScatterKit/ResourceBundle-ScatterKit-ScatterKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = ScatterKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+		0487BC50EBAF561E76D74C196888187C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 391E76CBCC3F8A7AAB989D2778641700 /* ScatterKit.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/ScatterKit";
+				INFOPLIST_FILE = "Target Support Files/ScatterKit/ResourceBundle-ScatterKit-ScatterKit-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				PRODUCT_NAME = ScatterKit;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
 		07488D4657FB0A78086563621D425F8A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -511,7 +594,7 @@
 		};
 		2C7BC3841B3C186A9F0C397B9E1B454A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8755EEB266F03D961BD16AB6378AFBBC /* ScatterKit.xcconfig */;
+			baseConfigurationReference = 391E76CBCC3F8A7AAB989D2778641700 /* ScatterKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -546,7 +629,7 @@
 		};
 		43E9AA28DF5EC9B33465EDA0C1835785 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8755EEB266F03D961BD16AB6378AFBBC /* ScatterKit.xcconfig */;
+			baseConfigurationReference = 391E76CBCC3F8A7AAB989D2778641700 /* ScatterKit.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -825,6 +908,15 @@
 			buildConfigurations = (
 				FABA33B88748A28D32D82D654C291A82 /* Debug */,
 				A093EAC68159502238AF44FBF9D6C3F1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		ECA8333756CCCE037E05751EE040DB49 /* Build configuration list for PBXNativeTarget "ScatterKit-ScatterKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0487BC50EBAF561E76D74C196888187C /* Debug */,
+				004817B613D861541D4A18314456E5F3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

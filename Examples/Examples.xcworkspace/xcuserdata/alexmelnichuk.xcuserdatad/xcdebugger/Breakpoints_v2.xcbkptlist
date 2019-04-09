@@ -49,38 +49,6 @@
             endingLineNumber = "191"
             landmarkName = "parseError(action:queryItems:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "PaytomatSDK.PaytomatSDK.(parseError in _340E5E6D463852D57E0275069918F9B7)(action: PaytomatSDK.PaytomatSDK.SimpleWallet.Action, queryItems: Swift.Array&lt;Foundation.URLQueryItem&gt;) -&gt; PaytomatSDK.PaytomatSDK.URLResult"
-                  moduleName = "PaytomatSDK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexmelnichuk/XcodeProjects/sdk-paytomat/Examples/Pods/PaytomatSDK/Paytomat%20SDK/Paytomat%20SDK/Source/PaytomatSDK.swift"
-                  timestampString = "565374095.938579"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "191"
-                  endingLineNumber = "191"
-                  offsetFromSymbolStart = "56">
-               </Location>
-               <Location
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Foundation.URLQueryItem) -&gt; Swift.Bool in PaytomatSDK.PaytomatSDK.(parseError in _340E5E6D463852D57E0275069918F9B7)(action: PaytomatSDK.PaytomatSDK.SimpleWallet.Action, queryItems: Swift.Array&lt;Foundation.URLQueryItem&gt;) -&gt; PaytomatSDK.PaytomatSDK.URLResult"
-                  moduleName = "PaytomatSDK"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/alexmelnichuk/XcodeProjects/sdk-paytomat/Examples/Pods/PaytomatSDK/Paytomat%20SDK/Paytomat%20SDK/Source/PaytomatSDK.swift"
-                  timestampString = "565374095.942593"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "191"
-                  endingLineNumber = "191"
-                  offsetFromSymbolStart = "24">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -97,6 +65,86 @@
             endingLineNumber = "149"
             landmarkName = "parseResult(from:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/ScatterKit/ScatterKit/ScatterKit/Source/ScatterKitDelegate.swift"
+            timestampString = "576489445.315616"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "38"
+            endingLineNumber = "38"
+            landmarkName = "scatterDidRequestAccountName(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/ScatterKit/ScatterKit/ScatterKit/Source/ScatterKit.swift"
+            timestampString = "576489762.641906"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "injectJS()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Pods/ScatterKit/ScatterKit/ScatterKit/Source/ScatterKit.swift"
+            timestampString = "576489762.642015"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "handleScriptMessage(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "ScatterKit.ScatterKit.(handleScriptMessage in _888E0B1302940D7EEE1BE39634ED0853)(__C.WKScriptMessage) -&gt; ()"
+                  moduleName = "ScatterKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexmelnichuk/XcodeProjects/ScatterKit/Examples/Pods/ScatterKit/ScatterKit/ScatterKit/Source/ScatterKit.swift"
+                  timestampString = "576489445.596554"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "84"
+                  endingLineNumber = "84"
+                  offsetFromSymbolStart = "948">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in ScatterKit.ScatterKit.(handleScriptMessage in _888E0B1302940D7EEE1BE39634ED0853)(__C.WKScriptMessage) -&gt; ()"
+                  moduleName = "ScatterKit"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/alexmelnichuk/XcodeProjects/ScatterKit/Examples/Pods/ScatterKit/ScatterKit/ScatterKit/Source/ScatterKit.swift"
+                  timestampString = "576489445.601106"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "580">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

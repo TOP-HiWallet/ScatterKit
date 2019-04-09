@@ -3,7 +3,7 @@ use_frameworks!
 
 target 'Examples' do
     
-    pod 'ScatterKit', :path => '../'
+  pod 'ScatterKit'
 
   target 'ExamplesTests' do
     inherit! :search_paths

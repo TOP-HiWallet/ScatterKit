@@ -54,8 +54,7 @@ public class ScatterKit {
     }
     
     private func injectJS() {
-        let customUserAgent = webView?.customUserAgent?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        let userAgent = customUserAgent.isEmpty ? "ScatterKit_iOS" : customUserAgent
+        let userAgent = webView?.customUserAgent ?? "ScatterKit_iOS"
         let scatterBundlePath = Bundle(for: ScatterKit.self).path(forResource: "ScatterKit", ofType: "bundle")!
         let scriptPath = Bundle(path: scatterBundlePath)!.path(forResource: "scatterkit_script", ofType: "js")!
         var content = try! String(contentsOfFile: scriptPath)

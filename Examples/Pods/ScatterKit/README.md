@@ -54,8 +54,8 @@ extension YourViewController: ScatterKitDelegate {
 ```swift
 extension YourViewController: ScatterKitDelegate {
     func scatterDidRequestMessageSignature(_ request: ScatterKit.Request.MessageSignature, completionHandler: @escaping SKCallback<ScatterKit.Response.MessageSignature>) throws {
-            var data = Data(request.data.utf8)
-            if !request.isHash {
+            var data = Data(result.info.signature.data.utf8)
+            if !result.info.signature.isHash {
                 data = makeSha256(data)
             }
             let signature = makeSignature(privateKey: self.privateKey, digest: data)

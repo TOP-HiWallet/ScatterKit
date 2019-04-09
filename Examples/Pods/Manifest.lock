@@ -2,15 +2,15 @@ PODS:
   - ScatterKit (0.0.1)
 
 DEPENDENCIES:
-  - ScatterKit (from `../`)
+  - ScatterKit
 
-EXTERNAL SOURCES:
-  ScatterKit:
-    :path: "../"
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - ScatterKit
 
 SPEC CHECKSUMS:
-  ScatterKit: d11567707c1a4352fab9965d2da684687e6e77bc
+  ScatterKit: 77a912b4b996e1e54352b49815a59a7a22bc14ff
 
-PODFILE CHECKSUM: c085e3e37ec333fc9663036304fd2dcf53bca105
+PODFILE CHECKSUM: 39a67bc80288141e8e80569947b94c8dd8b11e7c
 
 COCOAPODS: 1.6.1

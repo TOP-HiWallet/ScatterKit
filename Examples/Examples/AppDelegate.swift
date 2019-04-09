@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import PaytomatSDK
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
