@@ -10,7 +10,6 @@ import UIKit
 import WebKit
 
 public class ScatterKit {
-
     public var delegate: ScatterKitDelegate? {
         get {
             objc_sync_enter(self)
@@ -54,15 +53,15 @@ public class ScatterKit {
     }
     
     private func injectJS() {
-        let customUserAgent = webView?.customUserAgent?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
-        let userAgent = customUserAgent.isEmpty ? "ScatterKit_iOS" : customUserAgent
+        let userAgent = webView?.customUserAgent?.trimmingCharacters(in: .whitespacesAndNewlines) ?? ""
         let scatterBundlePath = Bundle(for: ScatterKit.self).path(forResource: "ScatterKit", ofType: "bundle")!
         let scriptPath = Bundle(path: scatterBundlePath)!.path(forResource: "scatterkit_script", ofType: "js")!
         var content = try! String(contentsOfFile: scriptPath)
+        
         let scriptString = """
         var SP_SCRIPT = document.createElement('script');
         var SP_USER_AGENT_ANDROID = "SP_USER_AGENT_ANDROID";
-        var SP_USER_AGENT_IOS = "\(userAgent)";
+        var SP_USER_AGENT_IOS = '\(userAgent)';
         var SP_TIMEOUT = \(60 * 1000);
         SP_SCRIPT.type = 'text/javascript';
         SP_SCRIPT.text = \"
