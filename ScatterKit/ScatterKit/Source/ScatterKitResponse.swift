@@ -19,7 +19,8 @@ extension ScatterKit {
             case pushActions(Transaction)
             case pushTransfer(Transaction)
             case transactionSignature(TransactionSignature)
-            case messageSignature(MessageSignature)
+            case messageSignature(String)
+            case identityFromPermissions(Identity)
             case error(Error)
         }
         
@@ -36,7 +37,7 @@ extension ScatterKit {
             case success = 0
             case error = 1
         }
-        
+     
         let request: Request
         let code: Code
         let data: Params
@@ -44,52 +45,72 @@ extension ScatterKit {
       
         //let serialNumber: String
         
-        public func encode(to encoder: Encoder) throws {
-            var container = encoder.container(keyedBy: CodingKeys.self)
-            
-            if case let .error(error) = data {
-                let scatterError = error as? ScatterKitErrorConvertible
-                let errorMessage = scatterError?.scatterErrorMessage ?? message
-                let errorCode = scatterError?.scatterErrorCode?.rawValue ?? code.rawValue
-                
-                try container.encode(errorCode, forKey: .code)
-                try container.encode(errorMessage, forKey: .message)
-                try container.encode(true, forKey: .isError)
-                if let type = scatterError?.scatterErrorKind {
-                    try container.encode(type, forKey: .type)
-                }
-                return
-            }
-            try container.encode(code, forKey: .code)
-            try container.encode(message, forKey: .message)
+        func encodeData<K>(container: inout KeyedEncodingContainer<K>, forKey key: K) throws {
             switch data {
             case .appInfo(let appInfo):
                 let appInfoData = AppInfoData(appInfo: appInfo,
                                               protocolName: ProtocolInfo.name,
                                               protocolVersion: ProtocolInfo.version)
-                try container.encode(appInfoData, forKey: .data)
+                
+                try container.encode(appInfoData, forKey: key)
             case .walletLanguage(let language):
-                try container.encode(language, forKey: .data)
+                try container.encode(language, forKey: key)
             case .eosAccount(let name):
-                try container.encode(name, forKey: .data)
+                try container.encode(name, forKey: key)
             case .eosBalance(let balance):
-                try container.encode(balance, forKey: .data)
+                try container.encode(balance, forKey: key)
             case .walletWithAccount(let walletWithAccount):
-                try container.encode(walletWithAccount, forKey: .data)
+                try container.encode(walletWithAccount, forKey: key)
             case .pushActions(let transaction),
                  .pushTransfer(let transaction):
                 let transactionData = TransactionData(transaction: transaction,
                                                       serialNumber: UUID().uuidString)
-                try container.encode(transactionData, forKey: .data)
+                try container.encode(transactionData, forKey: key)
             case .transactionSignature(let signatureData):
-                let signature = TransactionSignatureData(signData: signatureData,
-                                                         serialNumber: UUID().uuidString)
-                try container.encode(signature, forKey: .data)
+                try container.encode(signatureData, forKey: key)
             case .messageSignature(let messageSignature):
-                try container.encode(messageSignature, forKey: .data)
+                try container.encode(messageSignature, forKey: key)
+            case .identityFromPermissions(let identity):
+                try container.encode(identity, forKey: key)
             case .error:
                 break
             }
+        }
+        
+        func encodeError<K>(_ error: Error,
+                            container: inout KeyedEncodingContainer<K>,
+                            codeKey: K,
+                            messageKey: K,
+                            isErrorKey: K,
+                            typeKey: K) throws {
+            let scatterError = error as? ScatterKitErrorConvertible
+            let errorMessage = scatterError?.scatterErrorMessage ?? message
+            let errorCode = scatterError?.scatterErrorCode?.rawValue ?? code.rawValue
+            
+            try container.encode(errorCode, forKey: codeKey)
+            try container.encode(errorMessage, forKey: messageKey)
+            try container.encode(true, forKey: isErrorKey)
+            
+            if let type = scatterError?.scatterErrorKind {
+                try container.encode(type, forKey: typeKey)
+            }
+        }
+        
+        public func encode(to encoder: Encoder) throws {
+            
+            var container = encoder.container(keyedBy: CodingKeys.self)
+            
+            if case let .error(error) = data {
+                try encodeError(error, container: &container,
+                                codeKey: .code,
+                                messageKey: .message,
+                                isErrorKey: .isError,
+                                typeKey: .type)
+                return
+            }
+            try container.encode(code, forKey: .code)
+            try container.encode(message, forKey: .message)
+            try encodeData(container: &container, forKey: .data)
         }
     }
 }
@@ -181,15 +202,50 @@ extension ScatterKit.Response {
     
     // MARK: Message signature
     
-    public struct MessageSignature: Encodable {
-        let message: String
-        let data: String
+    public struct Identity: Encodable {
+        public struct Account: Encodable {
+            public enum Blockchain: String, Encodable {
+                case eos
+            }
+            
+            let name: String
+            let authority: String
+            let publicKey: String
+            let blockchain: Blockchain
+            let isHardware: Bool
+            
+            public init(name: String,
+                        authority: String,
+                        publicKey: String,
+                        blockchain: Blockchain,
+                        isHardware: Bool) {
+                self.name = name
+                self.authority = authority
+                self.publicKey = publicKey
+                self.blockchain = blockchain
+                self.isHardware = isHardware
+            }
+        }
         
-        public init(message: String, signature: String) {
-            self.message = message
-            self.data = signature
+        let hash: String
+        let publicKey: String
+        let name: String
+        let kyc: Bool
+        let accounts: [Account]
+        
+        public init(hash: String,
+                    publicKey: String,
+                    name: String,
+                    kyc: Bool,
+                    accounts: [Account]) {
+            self.hash = hash
+            self.publicKey = publicKey
+            self.name = name
+            self.kyc = kyc
+            self.accounts = accounts
         }
     }
+    
 }
 
 // MARK: AppInfoData+Encodable

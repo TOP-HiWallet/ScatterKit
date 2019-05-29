@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ScatterKit"
-  s.version      = "0.0.5"
+  s.version      = "0.0.6"
   s.swift_version = '4.2'
   s.summary      = "Communicate with Scatter via js interface"
   s.description  = <<-DESC 
@@ -21,7 +21,10 @@ ScatterKit allows communication between Swift applications and web pages that us
 
   s.source_files  = "ScatterKit/ScatterKit/Source/**/*.swift"
   s.resource_bundles = {
-      'ScatterKit' => ['ScatterKit/ScatterKit/Source/scatterkit_script.js']
+      'ScatterKit' => [
+	'ScatterKit/ScatterKit/Source/js/scatterkit_browser.js',
+	'ScatterKit/ScatterKit/Source/js/scatterkit_desktop.js'
+      ]
   }
   s.exclude_files = "Examples/*"
   s.frameworks = 'Foundation', 'UIKit', 'WebKit'

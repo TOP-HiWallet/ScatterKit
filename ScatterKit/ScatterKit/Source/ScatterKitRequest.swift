@@ -14,33 +14,34 @@ extension ScatterKit {
         enum Params {
             case appInfo
             case walletLanguage
-            case eosAccount
             case eosBalance(EOSBalance)
             case walletWithAccount
             case pushActions([Action])
             case pushTransfer(Transfer)
-            case transactionSignature(TransactionSignature)
+            case transactionSignature(TransactionSignatureKind)
             case messageSignature(MessageSignature)
+            case identityFromPermissions
         }
         
-        enum MethodName: String, Decodable {
-            case getAppInfo = "callbackGetAppInfo"
-            case walletLanguage = "callbackWalletLanguage"
-            case getEosAccount = "callbackGetEosAccount"
-            case getEosBalance = "callbackGetEosBalance"
-            case getWalletWithAccount = "callbackGetWalletWithAccount"
-            case requestSignature = "callbackRequestSignature"
-            case requestMessageSignature = "callbackRequestMsgSignature"
-            case pushTransfer = "callbackPushTransfer"
-            case pushActions = "callbackPushActions"
+        enum MethodName: String, Codable {
+            case getAppInfo
+            case walletLanguage
+            case getEosBalance
+            case getWalletWithAccount
+            case requestSignature
+            case getArbitrarySignature
+            case requestArbitrarySignature
+            case pushTransfer
+            case pushActions
+            case identityFromPermissions
+            case getOrRequestIdentity
             case unknown
-          //  case getEosAccount = "getEosAccount"
-          //  case requestSignature = "requestSignature"
         }
         
         let methodName: MethodName
         //let serialNumber: String
         let params: Params?
+        let callback: String
     }
 }
 
@@ -50,47 +51,63 @@ extension ScatterKit.Request: Decodable {
         case methodName
         case serialNumber
         case params
+        case callback
     }
     
-    public init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        let paramsString = (try? container.decode(String.self, forKey: .params)) ?? ""
-        let data = Data(paramsString.utf8)
-        let decoder = JSONDecoder()
-        
-        self.methodName = (try? container.decode(MethodName.self, forKey: .methodName)) ?? .unknown
-        // self.serialNumber = try container.decode(String.self, forKey: .serialNumber)
+    init<K>(container: KeyedDecodingContainer<K>,
+            forKey key: K,
+            methodName: MethodName,
+            callback: String) throws {
+        self.methodName = methodName
+        self.callback = callback
         do {
             switch methodName {
             case .getAppInfo:
                 self.params = .appInfo
             case .walletLanguage:
                 self.params = .walletLanguage
-            case .getEosAccount:
-                self.params = .eosAccount
             case .getEosBalance:
-                let eosBalance = try decoder.decode(EOSBalance.self, from: data)
+                let eosBalance = try container.decode(EOSBalance.self, forKey: key)
                 self.params = .eosBalance(eosBalance)
             case .getWalletWithAccount:
                 self.params = .walletWithAccount
             case .pushActions:
+                let paramsString = (try? container.decode(String.self, forKey: key)) ?? ""
+                let data = Data(paramsString.utf8)
                 let actions = try [Action](actionsData: data)
                 self.params = .pushActions(actions)
             case .pushTransfer:
-                let transfer = try decoder.decode(Transfer.self, from: data)
+                let transfer = try container.decode(Transfer.self, forKey: key)
                 self.params = .pushTransfer(transfer)
             case .requestSignature:
-                let signatureRequest = try decoder.decode(TransactionSignature.self, from: data)
-                self.params = .transactionSignature(signatureRequest)
-            case .requestMessageSignature:
-                let messageSignature = try decoder.decode(MessageSignature.self, from: data)
+                do {
+                    let signatureRequest = try container.decode(TransactionSignature.self, forKey: key)
+                    self.params = .transactionSignature(.transaction(signatureRequest))
+                } catch {
+                    let signatureRequest = try container.decode(SerializedTransactionSignature.self, forKey: key)
+                    self.params = .transactionSignature(.serializedTransaction(signatureRequest))
+                }
+            case .getArbitrarySignature, .requestArbitrarySignature:
+                let messageSignature = try container.decode(MessageSignature.self, forKey: key)
                 self.params = .messageSignature(messageSignature)
             case .unknown:
                 self.params = nil
+            case .getOrRequestIdentity, .identityFromPermissions:
+                self.params = .identityFromPermissions
             }
         } catch {
             self.params = nil
         }
+    }
+    
+    public init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        let methodName = (try? container.decode(MethodName.self, forKey: .methodName)) ?? .unknown
+        let callback = try container.decode(String.self, forKey: .callback)
+        try self.init(container: container,
+                      forKey: .params,
+                      methodName: methodName,
+                      callback: callback)
     }
 }
 
@@ -120,6 +137,10 @@ extension ScatterKit.Request {
         public let data: [String: Any]
     }
     
+    public enum TransactionSignatureKind {
+        case transaction(TransactionSignature)
+        case serializedTransaction(SerializedTransactionSignature)
+    }
     
     // MARK: Transaction Signature
     
@@ -137,6 +158,16 @@ extension ScatterKit.Request {
         public let buf: Buffer
     }
     
+    // MARK: Serialized transaction signature
+
+    public struct SerializedTransactionSignature: Decodable {
+        public struct Transaction: Decodable {
+            public let chainId: String
+            public let serializedTransaction: String
+        }
+        public let transaction: Transaction
+    }
+    
     // MARK: Message signature
     
     public struct MessageSignature: Decodable {
@@ -146,7 +177,6 @@ extension ScatterKit.Request {
         public let isHash: Bool
     }
 }
-
 
 extension Array where Element == ScatterKit.Request.Action {
     init(actionsData: Data) throws {
@@ -215,3 +245,4 @@ extension ScatterKit.Request.TransactionSignature.Buffer: Decodable {
         self.data = Data(bytes)
     }
 }
+
