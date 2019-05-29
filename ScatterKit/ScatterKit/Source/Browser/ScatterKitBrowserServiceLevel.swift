@@ -10,18 +10,17 @@ import UIKit
 import WebKit
 
 class ScatterKitBrowserServiceLevel: ScatterKitServiceLevelProtocol, ScatterKitScriptMessageHandlerProxyDelegate {
-    
     typealias ServiceLevelRequest = ScatterKit.Request
     typealias ServiceLevelResponse = ScatterKit.Response
     typealias ServiceLevelError = ScatterKit.Response
-    
-    weak var delegate: ScatterKitDelegate?
     
     let queue: DispatchQueue
     let delegateQueue: DispatchQueue
     
     var scriptDelegate: ScatterKitScriptMessageHandlerProxy!
     weak var webView: WKWebView?
+    weak var delegate: ScatterKitDelegate?
+    
     private var apiHostLevel: ScatterKitBrowserApiHostLevel!
     
     public init(webView: WKWebView,
@@ -71,7 +70,7 @@ class ScatterKitBrowserServiceLevel: ScatterKitServiceLevelProtocol, ScatterKitS
         let end = content.index(before: content.endIndex)
         content.insert(contentsOf: "\";document.getElementsByTagName('head')[0].appendChild(SP_SCRIPT);", at: end)
         #if DEBUG
-        print("__SCATTER: content: \(content)")
+        print("\(ScatterKit.self): content: \(content)")
         #endif
         let script = WKUserScript(source: content, injectionTime: .atDocumentEnd, forMainFrameOnly: true)
         webView?.configuration.userContentController.addUserScript(script)
@@ -92,7 +91,7 @@ class ScatterKitBrowserServiceLevel: ScatterKitServiceLevelProtocol, ScatterKitS
             responseData = try encoder.encode(response)
         } catch {
             #if DEBUG
-            print("__SCATTER: browser response error: \(error)")
+            print("\(ScatterKit.self): browser response error: \(error)")
             #endif
             return
         }
@@ -100,12 +99,12 @@ class ScatterKitBrowserServiceLevel: ScatterKitServiceLevelProtocol, ScatterKitS
         let callback = response.request.callback
         let js = String(format: "%@('%@')", callback, json)
         #if DEBUG
-        print("__SCATTER: browser javascript: \(js)")
+        print("\(ScatterKit.self): browser javascript: \(js)")
         #endif
         DispatchQueue.main.async { [weak self] in
             self?.webView?.evaluateJavaScript(js) { result, error in
                 #if DEBUG
-                print("__SCATTER: browser evaluated: \(result), \(error) using: \(js)")
+                print("\(ScatterKit.self): browser evaluated: \(String(describing: result)), \(String(describing: error)) using: \(js)")
                 #endif
             }
         }

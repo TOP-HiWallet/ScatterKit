@@ -10,7 +10,6 @@ import UIKit
 import WebKit
 
 class ScatterKitDesktopApiHostLevel: ScatterKitHostLevelProtocol {
-
     typealias ServiceLevel = ScatterKitDesktopServiceLevel
     
     weak var serviceLevel: ServiceLevel?
@@ -88,7 +87,6 @@ extension ScatterKitDesktopApiHostLevel.HostLevelRequest: Decodable {
             let nonce = try container.decode(Int.self, forKey: .nonce)
             self.nonce = "\(nonce)"
         }
-        
         do {
             self.nextNonce = try container.decode(String.self, forKey: .nextNonce)
         } catch {
@@ -98,7 +96,9 @@ extension ScatterKitDesktopApiHostLevel.HostLevelRequest: Decodable {
         
         let methodName = try container.decode(ScatterKit.Request.MethodName.self, forKey: .type)
         self.data = try ScatterKit.Request(container: container, forKey: .payload, methodName: methodName, callback: "")
-        print("__SCATTER_KIT request: \(data)")
+        #if DEBUG
+        print("\(ScatterKit.self): request: \(data)")
+        #endif
     }
 }
 

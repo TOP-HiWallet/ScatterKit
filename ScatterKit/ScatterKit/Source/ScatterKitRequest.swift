@@ -39,17 +39,14 @@ extension ScatterKit {
         }
         
         let methodName: MethodName
-        //let serialNumber: String
         let params: Params?
         let callback: String
     }
 }
 
-
 extension ScatterKit.Request: Decodable {
     enum CodingKeys: String, CodingKey {
         case methodName
-        case serialNumber
         case params
         case callback
     }

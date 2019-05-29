@@ -35,7 +35,7 @@ protocol ScatterKitServiceLevelProtocol: class {
 extension ScatterKitServiceLevelProtocol {
     func handleMessage(_ message: Any) {
         #if DEBUG
-        print("__SCATTER browser message: \(message)")
+        print("\(ScatterKit.self): browser message: \(message)")
         #endif
         queue.async { [weak self] in
             guard let self = self,
@@ -47,7 +47,7 @@ extension ScatterKitServiceLevelProtocol {
                 try? self.sendHostLevelRequest(serviceLevelRequest)
             } catch {
                 #if DEBUG
-                print("__SCATTER error: \(error)")
+                print("\(ScatterKit.self): error: \(error)")
                 #endif
             }
         }

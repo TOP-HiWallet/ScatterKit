@@ -10,7 +10,6 @@ import UIKit
 import WebKit
 
 class ScatterKitBrowserApiHostLevel: ScatterKitHostLevelProtocol {
-    
     typealias ServiceLevel = ScatterKitBrowserServiceLevel
     typealias HostLevelRequest = ScatterKit.Request
     typealias HostLevelResponse = ScatterKit.Response

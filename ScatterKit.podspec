@@ -1,10 +1,10 @@
 Pod::Spec.new do |s|
   s.name         = "ScatterKit"
-  s.version      = "0.0.6"
+  s.version      = "0.0.7"
   s.swift_version = '4.2'
-  s.summary      = "Communicate with Scatter via js interface"
+  s.summary      = "Communicate with Scatter via JavaScript interface"
   s.description  = <<-DESC 
-ScatterKit allows communication between Swift applications and web pages that use Scatter plugin
+ScatterKit allows communication between Swift applications and web pages that use Scatter for chrome extension or desktop application
                    DESC
 
   s.homepage     = "https://paytomat.com/"

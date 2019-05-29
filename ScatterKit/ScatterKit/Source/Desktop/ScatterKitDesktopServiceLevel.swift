@@ -10,7 +10,6 @@ import UIKit
 import WebKit
 
 class ScatterKitDesktopServiceLevel: ScatterKitServiceLevelProtocol, ScatterKitScriptMessageHandlerProxyDelegate {
-    
     typealias ServiceLevelError = ServiceLevelResponse
     
     enum Header: String, Codable {
@@ -18,13 +17,13 @@ class ScatterKitDesktopServiceLevel: ScatterKitServiceLevelProtocol, ScatterKitS
         case event = "42/scatter"
     }
     
-    weak var delegate: ScatterKitDelegate?
-    
     let queue: DispatchQueue
     let delegateQueue: DispatchQueue
     
     var scriptDelegate: ScatterKitScriptMessageHandlerProxy!
     weak var webView: WKWebView?
+    weak var delegate: ScatterKitDelegate?
+    
     private var apiHostLevel: ScatterKitDesktopApiHostLevel!
     
     public init(webView: WKWebView,
@@ -84,7 +83,7 @@ class ScatterKitDesktopServiceLevel: ScatterKitServiceLevelProtocol, ScatterKitS
             responseData = try encoder.encode(response)
         } catch {
             #if DEBUG
-            print("__SCATTER: desktop response error: \(error)")
+            print("\(ScatterKit.self): desktop response error: \(error)")
             #endif
             return
         }
@@ -94,12 +93,12 @@ class ScatterKitDesktopServiceLevel: ScatterKitServiceLevelProtocol, ScatterKitS
         let string = "\(header),\(response)"
         let js = String(format: "%@('%@','%@')", callback, "message", string)
         #if DEBUG
-        print("__SCATTER: desktop javascript: \(js)")
+        print("\(ScatterKit.self): desktop javascript: \(js)")
         #endif
         DispatchQueue.main.async { [weak self] in
             self?.webView?.evaluateJavaScript(js) { result, error in
                 #if DEBUG
-                print("__SCATTER: desktop evaluated: \(result), \(error) using: \(js)")
+                print("\(ScatterKit.self): desktop evaluated: \(String(describing: result)), \(String(describing: error)) using: \(js)")
                 #endif
             }
         }

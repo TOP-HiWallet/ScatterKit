@@ -10,7 +10,6 @@ import UIKit
 import WebKit
 
 class ScatterKitDesktopApiClientLevel: ScatterKitClientLevelProtocol {
-    
     typealias ServiceLevel = ScatterKitDesktopServiceLevel
     typealias HostLevel = ScatterKitDesktopApiHostLevel
     typealias ClientLevelRequest = ScatterKit.Request

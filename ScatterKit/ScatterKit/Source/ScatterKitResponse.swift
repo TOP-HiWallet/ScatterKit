@@ -43,8 +43,6 @@ extension ScatterKit {
         let data: Params
         let message: String
       
-        //let serialNumber: String
-        
         func encodeData<K>(container: inout KeyedEncodingContainer<K>, forKey key: K) throws {
             switch data {
             case .appInfo(let appInfo):
