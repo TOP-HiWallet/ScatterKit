@@ -20,6 +20,7 @@ extension ScatterKit {
             case pushTransfer(Transfer)
             case transactionSignature(TransactionSignatureKind)
             case messageSignature(MessageSignature)
+            case authentication(Authentication)
             case identityFromPermissions
         }
         
@@ -85,9 +86,11 @@ extension ScatterKit.Request: Decodable {
                     let signatureRequest = try container.decode(SerializedTransactionSignature.self, forKey: key)
                     self.params = .transactionSignature(.serializedTransaction(signatureRequest))
                 }
+            case .authenticate:
+                let authentication = try container.decode(Authentication.self, forKey: key)
+                self.params = .authentication(authentication)
             case .getArbitrarySignature,
-                 .requestArbitrarySignature,
-                 .authenticate:
+                 .requestArbitrarySignature:
                 let messageSignature = try container.decode(MessageSignature.self, forKey: key)
                 self.params = .messageSignature(messageSignature)
             case .unknown:
@@ -171,10 +174,27 @@ extension ScatterKit.Request {
     // MARK: Message signature
     
     public struct MessageSignature: Decodable {
-        public let publicKey: String
+        public let publicKey: String?
         public let data: String
         public let whatFor: String?
         public let isHash: Bool
+        
+        public init(publicKey: String,
+                    data: String,
+                    whatFor: String?,
+                    isHash: Bool) {
+            self.publicKey = publicKey
+            self.data = data
+            self.whatFor = whatFor
+            self.isHash = isHash
+        }
+    }
+    
+    public struct Authentication: Decodable {
+        public let nonce: String
+        public let origin: String?
+        public let data: String?
+        public let publicKey: String?
     }
 }
 

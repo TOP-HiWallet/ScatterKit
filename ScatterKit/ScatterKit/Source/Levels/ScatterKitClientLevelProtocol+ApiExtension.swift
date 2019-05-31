@@ -125,6 +125,18 @@ extension ScatterKitClientLevelProtocol where
                                    serviceRequest: serviceRequest) { delegate in
                 try delegate.scatterDidRequestMessageSignature(message, completionHandler: callback)
             }
+        case .authentication(let authentication):
+            let callback: SKCallback<String> = self.makeResultCallback(
+                clientRequest: request,
+                hostRequest: hostRequest,
+                serviceRequest: serviceRequest) {
+                    Response(request: request, code: .success, data: .messageSignature($0), message: "success")
+            }
+            self.asyncCallDelegate(request,
+                                   hostRequest: hostRequest,
+                                   serviceRequest: serviceRequest) { delegate in
+                try delegate.scatterDidRequestAuthentication(authentication, completionHandler: callback)
+            }
         case .identityFromPermissions:
             let callback: SKCallback<Response.Identity> = self.makeResultCallback(
                 clientRequest: request,

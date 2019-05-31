@@ -20,7 +20,7 @@ public protocol ScatterKitDelegate: class {
     func scatterDidRequestTransaction(with actions: [ScatterKit.Request.Action], completionHandler: @escaping SKCallback<ScatterKit.Response.Transaction>) throws
     func scatterDidRequestTransactionSignature(_ request: ScatterKit.Request.TransactionSignatureKind, completionHandler: @escaping SKCallback<ScatterKit.Response.TransactionSignature>) throws
     func scatterDidRequestMessageSignature(_ request: ScatterKit.Request.MessageSignature, completionHandler: @escaping SKCallback<String>) throws
-    
+    func scatterDidRequestAuthentication(_ request: ScatterKit.Request.Authentication, completionHandler: @escaping SKCallback<String>) throws
     func scatterDidRequestIdentity(_ completionHandler: @escaping SKCallback<ScatterKit.Response.Identity>) throws
 }
 
@@ -56,6 +56,10 @@ public extension ScatterKitDelegate {
     }
     
     func scatterDidRequestMessageSignature(_ request: ScatterKit.Request.MessageSignature, completionHandler: @escaping SKCallback<String>) throws {
+        throw ScatterKitError.unimplemented
+    }
+    
+    func scatterDidRequestAuthentication(_ request: ScatterKit.Request.Authentication, completionHandler: @escaping SKCallback<String>) throws {
         throw ScatterKitError.unimplemented
     }
     

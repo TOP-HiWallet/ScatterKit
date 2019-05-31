@@ -38,6 +38,7 @@ public enum ScatterKitError: Swift.Error {
         case accountMissing = "account_missing"
         case malformedRequirements = "malformed_requirements"
         case noNetwork = "no_network"
+        case invalidNonce = "invalid_nonce"
     }
     
     public enum Code: Int, Encodable {
