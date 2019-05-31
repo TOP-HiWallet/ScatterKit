@@ -29,6 +29,7 @@ extension ScatterKit {
             case getEosBalance
             case getWalletWithAccount
             case requestSignature
+            case authenticate
             case getArbitrarySignature
             case requestArbitrarySignature
             case pushTransfer
@@ -84,7 +85,9 @@ extension ScatterKit.Request: Decodable {
                     let signatureRequest = try container.decode(SerializedTransactionSignature.self, forKey: key)
                     self.params = .transactionSignature(.serializedTransaction(signatureRequest))
                 }
-            case .getArbitrarySignature, .requestArbitrarySignature:
+            case .getArbitrarySignature,
+                 .requestArbitrarySignature,
+                 .authenticate:
                 let messageSignature = try container.decode(MessageSignature.self, forKey: key)
                 self.params = .messageSignature(messageSignature)
             case .unknown:

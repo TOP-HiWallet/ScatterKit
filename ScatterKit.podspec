@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "ScatterKit"
-  s.version      = "0.0.7"
+  s.version      = "0.0.8"
   s.swift_version = '4.2'
   s.summary      = "Communicate with Scatter via JavaScript interface"
   s.description  = <<-DESC 
