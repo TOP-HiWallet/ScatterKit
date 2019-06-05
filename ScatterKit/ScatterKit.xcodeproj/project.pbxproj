@@ -73,6 +73,7 @@
 		668A9F87229DC97F0071A851 /* ScatterKitRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterKitRequest.swift; sourceTree = "<group>"; };
 		668A9F88229DC97F0071A851 /* ScatterKitResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScatterKitResponse.swift; sourceTree = "<group>"; };
 		668A9F92229DC9BC0071A851 /* Decodable+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Decodable+Extension.swift"; sourceTree = "<group>"; };
+		66CEB82F22A80757003D2DA4 /* ScatterKit.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; name = ScatterKit.podspec; path = ../ScatterKit.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +98,7 @@
 		663D8BEC22402390006271CD = {
 			isa = PBXGroup;
 			children = (
+				66CEB82F22A80757003D2DA4 /* ScatterKit.podspec */,
 				663D8BF822402391006271CD /* ScatterKit */,
 				663D8C0322402391006271CD /* ScatterKitTests */,
 				663D8BF722402391006271CD /* Products */,
