@@ -177,7 +177,8 @@ extension ScatterKit.Request {
         public let publicKey: String?
         public let data: String
         public let whatFor: String?
-        public let isHash: Bool
+        public var isHash: Bool?
+        public let origin: String? = ""
         
         public init(publicKey: String?,
                     data: String,
